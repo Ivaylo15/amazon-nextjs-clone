@@ -45,7 +45,7 @@ const Checkout = () => {
                     </div>
                 </div>
                 <div className="flex flex-col bg-white p-10 shadow-md">
-                    {items.length > 0 ? (
+                    {items.length > 0 && (
                         <>
                             <h2 className="whitespace-nowrap">Subtotal ({items.length} items): {' '}
                                 <span className="font-bold">
@@ -56,8 +56,6 @@ const Checkout = () => {
                                 {!session ? "Sign in to checkout" : "Proceed to checkout"}
                             </button>
                         </>
-                    ) : (
-                        <h2>No items</h2>
                     )}
                 </div>
             </main>
